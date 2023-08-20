@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --paleBlue:hsl(225, 100%, 94%);
+    --brightBlue:hsl(245, 75%, 52%);
+    --paleBluex:hsl(225, 100%, 98%);
+    --desaturatedBlue:hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%)
+}
+
+
+#wrapper{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: var(--paleBluex);
+    overflow:hidden;
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    width:25%;
+    margin:auto;
+    gap:1.5rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.pic{
+    width:100%
+}
+
+.pic>img{
+    width:100%;
+    border-radius:20px 20px 0 0
+}
+
+.plan{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:2rem;
+    background-color: var(--paleBlue);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.plan>img{
+    width:15%
+}
+
+.plan>a{
+    text-decoration: none;
+}
+
+.plan>div>h4{
+    margin-bottom: 5px;
+}
+
+.button{
+    background-color: var(--brightBlue);
+    padding:10px;
+    border-radius:20px;
+    cursor: pointer;
+    color:white;
+    width:80%;
+    margin: auto;
+}
+
+.cancel{
+    cursor: pointer;
+}
+
+.text{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    padding:1rem
+}
+
+a{
+    color:var(--darkBlue);
+    text-decoration: underline;
+}
+
+.text>h2,.cancel{
+    color:var(--darkBlue);
+    padding-bottom: 1rem;
+}
+
+.text>p{
+    font-weight: lighter;
+    opacity: 70%;
+}
+
+@media screen and (max-width:1050px) {
+    .container{
+        width:90%;
+    }
+    .plan{
+        justify-content: space-between;
+    }
+    a{
+        margin-right: 1rem;
+    }
+}   
